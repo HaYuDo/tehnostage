@@ -3,6 +3,8 @@
 Статический сайт без сборки: `index.html`, `styles.css`, `script.js`, картинки и видео в `media/`.
 Открыть локально: двойной клик по `index.html`.
 
+Шрифты (Onest, Unbounded, JetBrains Mono, лицензия SIL OFL) лежат в `fonts/` и подключаются через `fonts.css`. Внешних запросов к Google нет.
+
 ## Что заменить перед публикацией
 
 Всё правится в `index.html`.
