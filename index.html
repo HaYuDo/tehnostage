@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Техностейдж — роботы и автоматизация</title>
+<meta name="description" content="Техностейдж разрабатывает коммерческих и промышленных роботов и автоматизирует бизнес-процессы: агророботы, роботы-уборщики, диспетчеризация.">
+<meta name="theme-color" content="#11181c">
+<link rel="icon" href="logo.jpg">
+<meta property="og:title" content="Техностейдж — роботы и автоматизация">
+<meta property="og:description" content="Автономные роботы для полей, территорий и производств. От прототипа до серии.">
+<meta property="og:image" content="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="brand" href="#top" aria-label="Техностейдж">
+    <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M2 24 11 18v18H2z" fill="#4b5f69"/>
+      <rect x="14" y="10" width="11" height="26" fill="#4b5f69"/>
+      <rect x="28" y="2" width="10" height="34" fill="#f7931e"/>
+    </svg>
+    <span class="brand-name">ТЕХНО<b>СТЕЙДЖ</b></span>
+  </a>
+  <a class="partner" href="#partner" title="ПАО «Татнефть» — наш партнёр">
+    <span>Партнёры</span>
+    <img src="media/tatneft.svg" alt="ПАО «Татнефть»" width="394" height="109">
+  </a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#fleet">Проекты</a>
+    <a href="#process">О нас</a>
+  </nav>
+  <a class="btn btn-sm btn-ghost btn-edu" href="training.html">Обучение</a>
+  <a class="btn btn-sm btn-top" href="#contact">Обсудить задачу</a>
+  <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
+  <nav class="mnav" id="mnav" aria-label="Меню">
+    <a href="#fleet">Проекты</a>
+    <a href="#process">О нас</a>
+    <a href="training.html">Обучение</a>
+    <a class="btn" href="#contact">Обсудить задачу</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span> Роботы и автоматизация</p>
+      <h1>Системы, трудящиеся на <em>Ваш успех</em></h1>
+      <p class="lead">Разработка роботов и автоматизированных систем под ключ — для решения Ваших задач.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Написать нам</a>
+        <a class="btn btn-ghost" href="#fleet">Проекты ТехноСтейдж</a>
+      </div>
+    </div>
+    <aside class="hud" aria-label="Телеметрия демонстрационного робота">
+      <div class="hud-head"><span class="dot live"></span> UNIT-01 · автономный режим</div>
+      <dl>
+        <div><dt>Покрытие</dt><dd><span id="hudCov">0</span>%</dd></div>
+        <div><dt>Скорость</dt><dd><span id="hudSpd">0.0</span> м/с</dd></div>
+        <div><dt>Лидар</dt><dd><span id="hudPts">0</span> точек</dd></div>
+      </dl>
+      <div class="hud-bar"><i id="hudBar"></i></div>
+      <p class="hud-evt" id="hudEvt">Инициализация…</p>
+    </aside>
+  </div>
+  <a class="scroll-hint" href="#fleet" aria-label="Ниже">↓</a>
+</section>
+
+<!-- FLEET -->
+<section class="sec" id="fleet">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="tag">// 01 · ПРОЕКТЫ</p>
+      <h2>Наши проекты</h2>
+      <p class="sub">Каждая система — путь к оптимизации Вашего дела.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="media">
+          <img src="media/agrobot.jpg" alt="Гусеничный агроробот-культиватор с прицепным культиватором" loading="lazy" width="1000" height="667">
+          <span class="media-id">UNIT-01</span>
+        </div>
+        <div class="card-body">
+          <p class="tag">UNIT · ПОЛЕ</p>
+          <h3>Агроробот-культиватор</h3>
+          <p>Гусеничная платформа с гибридным приводом: ДВС-генератор и электромоторы. Обработка почвы и посев за один проход, управление дистанционно.</p>
+          <ul class="spec">
+            <li><span>Габариты</span><b>2,0 × 1,5 м</b></li>
+            <li><span>Привод</span><b>гибрид</b></li>
+            <li><span>Операции</span><b>почва + посев</b></li>
+          </ul>
+          <a class="more" href="https://hayudo.github.io/agrobot/pahar-x1/index.html" target="_blank" rel="noopener">Подробнее →</a>
+        </div>
+      </article>
+
+      <article class="card reveal" style="--d:.08s">
+        <div class="media">
+          <img src="media/robocleaner.jpg" alt="Оранжевый робот RoboCleaner на подземной парковке" loading="lazy" width="1000" height="667">
+          <span class="media-id">UNIT-02</span>
+        </div>
+        <div class="card-body">
+          <p class="tag">UNIT · ТЕРРИТОРИЯ</p>
+          <h3>RoboCleaner</h3>
+          <p>Автономная сухая и влажная уборка территорий с объездом препятствий. Диспетчер видит и контролирует робота удалённо.</p>
+          <ul class="spec">
+            <li><span>За смену</span><b>до 5000 м²</b></li>
+            <li><span>Уборка</span><b>сухая и влажная</b></li>
+            <li><span>Контроль</span><b>панель диспетчера</b></li>
+          </ul>
+          <a class="more" href="https://hayudo.github.io/agrobot/robocleaner/index.html" target="_blank" rel="noopener">Подробнее →</a>
+        </div>
+      </article>
+
+      <article class="card reveal" style="--d:.16s">
+        <div class="media">
+          <img src="media/vacorobot.jpg" alt="Белый робот VacoRobot с логотипом Техностейдж на площади" loading="lazy" width="1000" height="750">
+          <span class="media-id">UNIT-03</span>
+        </div>
+        <div class="card-body">
+          <p class="tag">UNIT · ПАРКИ И ДВОРЫ</p>
+          <h3>VacoRobot</h3>
+          <p>Робот-пылесос для листвы и мусора. Задние щётки для брусчатки, навигация по лидару и камерам.</p>
+          <ul class="spec">
+            <li><span>Навигация</span><b>лидар + камеры</b></li>
+            <li><span>Щётки</span><b>задние, для брусчатки</b></li>
+            <li><span>Температура</span><b>0…+50 °C</b></li>
+          </ul>
+          <a class="more" href="https://hayudo.github.io/agrobot/vacorobot/index.html" target="_blank" rel="noopener">Подробнее →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec sec-alt" id="process">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="tag">// 02 · КАК РАБОТАЕМ</p>
+      <h2>От вопроса к решению</h2>
+      <p class="sub">Весь цикл в одной команде: механика, электроника, софт и испытания.</p>
+    </header>
+
+    <ol class="steps">
+      <li class="reveal"><span class="n">01</span><h3>Проблема</h3><p>Выясняем, что мешает делу и где теряются время и деньги.</p></li>
+      <li class="reveal" style="--d:.06s"><span class="n">02</span><h3>Задача</h3><p>Формулируем, что должна делать система, и считаем эффект.</p></li>
+      <li class="reveal" style="--d:.12s"><span class="n">03</span><h3>Проект</h3><p>Схема, расчёты, 3D-модель, выбор сенсоров и привода.</p></li>
+      <li class="reveal" style="--d:.18s"><span class="n">04</span><h3>Наше решение</h3><p>Собираем робота или систему, пишем управление и навигацию.</p></li>
+      <li class="reveal" style="--d:.24s"><span class="n">05</span><h3>Испытание</h3><p>Проверяем «в полях», на реальных объектах и в реальной погоде.</p></li>
+      <li class="reveal" style="--d:.30s"><span class="n">06</span><h3>Серия и поддержка</h3><p>Производство, запуск, обучение персонала, сопровождение.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- AUTOMATION -->
+<section class="sec" id="automation">
+  <div class="wrap split">
+    <header class="sec-head reveal">
+      <p class="tag">// 03 · АВТОМАТИЗАЦИЯ</p>
+      <h2>Не только железо</h2>
+      <p class="sub">Робот полезен, когда встроен в процесс. Подключаем машины к диспетчерским панелям, учёту и отчётности, а рутинные бизнес-процессы автоматизируем программно.</p>
+      <ul class="ticks">
+        <li>Панели диспетчера и удалённый контроль</li>
+        <li>Планирование заданий и маршрутов</li>
+        <li>Автоматические отчёты и уведомления</li>
+        <li>Интеграция с вашими системами</li>
+      </ul>
+    </header>
+
+    <figure class="flow reveal" style="--d:.1s" aria-label="Схема: заявка, планировщик, робот, диспетчер, отчёт">
+      <svg viewBox="0 0 520 360" role="img">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#f7931e"/></marker>
+        </defs>
+        <g class="links">
+          <path d="M130 70h70" marker-end="url(#arr)"/>
+          <path d="M320 70h70" marker-end="url(#arr)"/>
+          <path d="M425 100v90" marker-end="url(#arr)"/>
+          <path d="M390 235h-70" marker-end="url(#arr)"/>
+          <path d="M200 235h-70" marker-end="url(#arr)"/>
+          <path d="M260 100v90" marker-end="url(#arr)"/>
+        </g>
+        <g class="nodes">
+          <g transform="translate(30 40)"><rect width="100" height="60" rx="8"/><text x="50" y="35">Заявка</text></g>
+          <g transform="translate(200 40)"><rect width="120" height="60" rx="8" class="hl"/><text x="60" y="35">Планировщик</text></g>
+          <g transform="translate(390 40)"><rect width="100" height="60" rx="8"/><text x="50" y="35">Робот</text></g>
+          <g transform="translate(390 195)"><rect width="100" height="60" rx="8"/><text x="50" y="35">Данные</text></g>
+          <g transform="translate(200 195)"><rect width="120" height="60" rx="8" class="hl"/><text x="60" y="35">Диспетчер</text></g>
+          <g transform="translate(30 195)"><rect width="100" height="60" rx="8"/><text x="50" y="35">Отчёт</text></g>
+        </g>
+        <text x="260" y="320" class="cap">заявка → задание → выполнение → контроль → отчёт</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="sec sec-alt" id="proof">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="tag">// 04 · О НАС</p>
+      <h2>Цифры</h2>
+    </header>
+
+    <div class="feature reveal" id="partner">
+      <div class="feature-logo"><img src="media/tatneft.svg" alt="ПАО «Татнефть»" width="394" height="109"></div>
+      <div class="feature-text">
+        <p class="tag">МЫ РАБОТАЕМ С</p>
+        <h3>ПАО «Татнефть»</h3>
+        <p>Одна из крупнейших нефтяных компаний России.</p>
+      </div>
+    </div>
+
+    <!-- Цифры: data-count — число, data-suffix — знак после него -->
+    <div class="stats reveal">
+      <div><b data-count="6">0</b><span>проектов, приносящих пользу</span></div>
+      <div><b data-count="60" data-suffix="%">0</b><span>экономии трудозатрат</span></div>
+      <div><b data-count="30" data-suffix="+">0</b><span>объединённых функций</span></div>
+      <div><b data-count="1">0</b><span>диспетчерское ПО для всех устройств</span></div>
+    </div>
+
+    <!-- Галерея «в полях». Положите файлы в папку media/ и замените слоты, см. README. -->
+    <h3 class="sub-h reveal">В полях</h3>
+    <div class="gallery reveal">
+      <figure class="slot wide" data-slot="Видео: робот за работой"><span>Видео будет здесь</span></figure>
+      <figure class="slot" data-slot="Фото"><span>Фото</span></figure>
+      <figure class="slot" data-slot="Фото"><span>Фото</span></figure>
+      <figure class="slot" data-slot="Фото"><span>Фото</span></figure>
+      <figure class="slot" data-slot="Фото"><span>Фото</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <p class="tag">// 05 · СВЯЗЬ</p>
+      <h2>Есть задача для робота?</h2>
+      <p class="sub">Расскажите, что нужно автоматизировать. Ответим и предложим решение.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:info@example.com">info@example.com</a>
+        <a class="btn btn-ghost" href="tel:+70000000000">+7 000 000-00-00</a>
+        <a class="btn btn-ghost" href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <span class="brand-name">ТЕХНО<b>СТЕЙДЖ</b></span>
+    <span>© 2026 · Роботы и автоматизация</span>
+    <a href="https://hayudo.github.io/agrobot/" target="_blank" rel="noopener">Все презентации ↗</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
